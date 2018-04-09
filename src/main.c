@@ -28,7 +28,11 @@
 #include <errno.h>
 #include <dirent.h>
 #include <sys/types.h>
+#if defined(__APPLE__)
+#include <sys/mount.h>
+#else
 #include <sys/vfs.h>
+#endif
 #include <sys/stat.h>
 #include <sys/time.h>
 #include <utime.h>
