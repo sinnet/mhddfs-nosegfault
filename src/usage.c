@@ -44,7 +44,7 @@ void usage(FILE * to)
 		"\n"
 		" see fusermount(1) for information about other options\n"
 		"";
-	fprintf(to, usage);
+	fputs(usage, to);
 	if (to==stdout) exit(0);
 	exit(-1);
 }
